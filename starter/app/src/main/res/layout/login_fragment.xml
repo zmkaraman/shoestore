@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/password_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/login_screen_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_screen_title"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="105dp" />
+
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="190dp" />
+
+        <EditText
+            android:id="@+id/email_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/email_text"
+            tools:layout_editor_absoluteY="176dp" />
+
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="263dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/password_text"
+            tools:layout_editor_absoluteY="253dp" />
+
+        <Button
+            android:id="@+id/new_account_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_account_button"
+            app:layout_constraintEnd_toStartOf="@+id/existing_account_button"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="460dp" />
+
+        <Button
+            android:id="@+id/existing_account_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_screen_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="456dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
