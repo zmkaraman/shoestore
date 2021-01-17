@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
         @Suppress("UNUSED_VARIABLE")
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         drawerLayout = binding.drawerLayout
-        val navController = this.findNavController(R.id.myNavHostFragment)
-        NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
+        //val navController = this.findNavController(R.id.myNavHostFragment)
+       // NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
 
-        // prevent nav gesture if not on start destination
+     /*   // prevent nav gesture if not on start destination
         navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, args: Bundle? ->
             if (nd.id == nc.graph.startDestination
                 || nd.label == "shoe_list_fragment"
@@ -34,12 +34,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        NavigationUI.setupWithNavController(binding.navView, navController)
+        NavigationUI.setupWithNavController(binding.navView, navController)*/
     }
-
+/*
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return NavigationUI.navigateUp(navController, drawerLayout)
-    }
+  7  }*/
 }
