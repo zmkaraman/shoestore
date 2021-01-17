@@ -40,9 +40,6 @@ class LoginFragment : Fragment() {
 
     private fun validateCredentials(): Boolean {
 
-        return true
-
-        //TODO MERVE test amacli
         val name = email_edittext.text.toString()
         val password = password_edittext.text.toString()
 
