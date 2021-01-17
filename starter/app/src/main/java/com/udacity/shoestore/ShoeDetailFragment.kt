@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.ShoeDetailFragmentBinding
 import com.udacity.shoestore.models.Shoe
@@ -19,6 +18,7 @@ class ShoeDetailFragment : Fragment() {
 
     private val shoeListViewModel: ShoeListViewModel by activityViewModels()
 
+    private var shoe  = Shoe()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,23 +30,34 @@ class ShoeDetailFragment : Fragment() {
             inflater, R.layout.shoe_detail_fragment, container, false
         )
 
+        binding.shoe = shoe
+
         binding.saveButton.setOnClickListener {
 
-            val shoe = Shoe(
-                shoe_name_edit_text.text.toString(),
-                size_editText.text.toString().toDouble(),
-                company_editText.text.toString(),
-                shoe_desc_edit_text.text.toString()
-            )
-            shoeListViewModel.addShoe(shoe)
-            findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
+            if (validateShoeDetails()) {
 
+                shoeListViewModel.addShoe(shoe)
+                findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
+            } else {
+                Toast.makeText(activity, "Please correct the shoe details", Toast.LENGTH_LONG).show()
+            }
         }
 
         binding.cancelButton.setOnClickListener {
             findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
         return binding.root
+    }
+
+    private fun validateShoeDetails(): Boolean {
+
+        val name = shoe.name ?: ""
+        val size = shoe.size.toString()
+        val company = shoe.company ?: ""
+        val description = shoe.description ?: ""
+
+        return !(name.isEmpty() || size.isEmpty() || company.isEmpty() || description.isEmpty())
+
     }
 
 }

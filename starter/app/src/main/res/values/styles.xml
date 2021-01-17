@@ -16,4 +16,40 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!-- Button Styles -->
+    <style name="YellowButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/ok_yellow_color</item>
+        <item name="colorControlHighlight">@color/selected_yellow_color</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="colorAccent">@color/selected_yellow_color</item>
+    </style>
+
+    <style name="BlueGreyButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/ok_bluegrey_color</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="colorControlHighlight">@color/skip_blue_color</item>
+    </style>
+
+    <style name="NewButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/ok_green_color</item>
+        <item name="colorControlHighlight">@color/selected_green_color</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="colorAccent">@color/selected_green_color</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="TitleText" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/grey_button_color</item>
+        <item name="android:fontFamily">sans-serif-smallcaps</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="RegularText" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey_button_color</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
 </resources>

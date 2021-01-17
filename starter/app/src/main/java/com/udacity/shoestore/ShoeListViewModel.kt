@@ -7,15 +7,9 @@ import com.udacity.shoestore.models.Shoe
 
 class ShoeListViewModel : ViewModel() {
 
-
     private var _shoelist = MutableLiveData<MutableList<Shoe>>()
     val shoeList : LiveData<MutableList<Shoe>>
         get() = _shoelist
-
-    // The new shoe
-    private var _shoe = MutableLiveData<Shoe>()
-    val shoe : LiveData<Shoe>
-        get() = _shoe
 
 
     private var _eventShoeAdd = MutableLiveData<Boolean>()
@@ -23,18 +17,14 @@ class ShoeListViewModel : ViewModel() {
         get() = _eventShoeAdd
 
     init {
-        //_shoe.value = newShoe
-        //Log.i("ScoreViewModel","New shoe is ${newShoe.name}")
 
         _shoelist.value = mutableListOf(
-            Shoe("Sports Arizona", 41.0, "Nike", "asdasdada adadad"),
-            Shoe("Kids' ZMK", 39.0, "Adidas", "asdasdada adadad"),
-            Shoe("Nike Air Jordan", 39.0, "Nike", "asdasdada adadad"),
-            Shoe("Gone in 60 Seconds", 39.0, "Nike", "asdasdada adadad"),
-            Shoe("Tennis shoes", 39.0, "Nike", "asdasdada adadad"),
-            Shoe("The Wic Boots", 39.0, "Nike", "asdasdada adadad"),
-            Shoe("Rider Bootie", 39.0, "D&G", "asdasdada adadad"),
-            Shoe("Classic Boots", 43.0, "Caterpillar", "asdasdada adadad")
+            Shoe("Sports Arizona", 41.0, "Adidas", "Best for sports"),
+            Shoe("Nike Air Jordan", 39.5, "Nike", "Popular choice for basketball"),
+            Shoe("Tennis shoes", 39.0, "Nike", "Best for tennis "),
+            Shoe("The Wic Boots", 35.0, "Nine West", "Best for sports"),
+            Shoe("Rider Bootie", 39.0, "Nine West", "Fashionable and comfortable"),
+            Shoe("Classic Boots", 43.5, "Caterpillar", "Casual and comfortable")
         )
 
     }
@@ -44,17 +34,5 @@ class ShoeListViewModel : ViewModel() {
         _eventShoeAdd.value = true
 
     }
-
-    fun onShoePreAdd() {
-        _shoelist.value?.plus(_shoe.value)
-        _eventShoeAdd.value = true
-    }
-
-    fun onShoeAdded() {
-        _eventShoeAdd.value = false
-    }
-
-
-
 
 }

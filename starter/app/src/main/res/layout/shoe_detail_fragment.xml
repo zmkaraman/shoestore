@@ -4,6 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -14,6 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/shoe_detail_desc"
+            android:theme="@style/RegularText"
             app:layout_constraintBaseline_toBaselineOf="@+id/shoe_desc_edit_text"
             app:layout_constraintEnd_toStartOf="@+id/shoe_desc_edit_text"
             app:layout_constraintStart_toStartOf="parent" />
@@ -22,11 +30,12 @@
             android:id="@+id/shoe_name_edit_text"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
             android:inputType="textPersonName"
+            android:text="@={shoe.name}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/title_text" />
 
         <TextView
             android:id="@+id/shoe_name_text"
@@ -34,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/shoe_detail_name"
+            android:theme="@style/RegularText"
             app:layout_constraintBaseline_toBaselineOf="@+id/shoe_name_edit_text"
             app:layout_constraintEnd_toStartOf="@+id/shoe_name_edit_text"
             app:layout_constraintStart_toStartOf="parent" />
@@ -45,6 +55,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
             android:inputType="textPersonName"
+            android:text="@={shoe.description}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/size_editText" />
 
@@ -54,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:text="@string/save"
+            android:theme="@style/BlueGreyButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cancel_button"/>
@@ -62,7 +74,8 @@
             android:id="@+id/cancel_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@android:string/cancel"
+            android:text="@string/cancel"
+            android:theme="@style/YellowButton"
             app:layout_constraintBaseline_toBaselineOf="@+id/save_button"
             app:layout_constraintEnd_toStartOf="@+id/save_button"
             app:layout_constraintStart_toStartOf="parent" />
@@ -73,6 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/company"
+            android:theme="@style/RegularText"
             app:layout_constraintBaseline_toBaselineOf="@+id/company_editText"
             app:layout_constraintEnd_toStartOf="@+id/company_editText"
             app:layout_constraintStart_toStartOf="parent" />
@@ -84,6 +98,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
             android:ems="10"
+            android:text="@={shoe.company}"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoe_name_edit_text" />
@@ -93,6 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:theme="@style/RegularText"
             android:text="@string/size"
             app:layout_constraintBaseline_toBaselineOf="@+id/size_editText"
             app:layout_constraintEnd_toStartOf="@+id/size_editText"
@@ -104,9 +120,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
-            android:ems="10"
             android:inputType="numberDecimal"
+            android:text="@{Double.toString(shoe.size)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/company_editText" />
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/new_shoe_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

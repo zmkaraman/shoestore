@@ -1,18 +1,25 @@
 <resources>
     <string name="app_name">ShoeStore</string>
     <string name="login_screen_title">Login</string>
-    <string name="email">Email Address</string>
-    <string name="password">Password</string>
+    <string name="email">Email Address:</string>
+    <string name="password">Password:</string>
+    <string name="welcome">Welcome</string>
+    <string name="instructions">Instructions</string>
+    <string name="logout">Log out</string>
     <string name="new_account_button">New Account</string>
     <string name="existing_account_button">Existing Account</string>
     <string name="welcome_screen_title">Welcome</string>
     <string name="welcome_screen_description">This is a shoe store app.</string>
-    <string name="welcome_screen_description2">Here are the blah blah for using this app</string>
+    <string name="welcome_screen_description2">Next page, you will see instructions for using this app.</string>
     <string name="welcome_button">Continue</string>
     <string name="instruction_screen_title">Instructions</string>
-    <string name="instruction_screen_description">This is a shoe store app instructions.</string>
+    <string name="instruction_screen_description">Next page will list the shoes with details.
+        If you want to add a new shoe, please click on the floating button on the list page.</string>
     <string name="instruction_button">Continue</string>
     <string name="submit_button">Submit</string>
+    <string name="shoe_list_title">List of the Shoes in Store</string>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -105,13 +112,14 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
-    <string name="shoe_detail_name">Name of the Shoe</string>
-    <string name="shoe_detail_desc">Description</string>
+    <string name="shoe_detail_name">Name of the Shoe:</string>
+    <string name="shoe_detail_desc">Description:</string>
     <string name="save">Save</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="cancel">Cancel</string>
-    <string name="company">Company</string>
-    <string name="size">Shoe Size</string>
+    <string name="company">Company:</string>
+    <string name="size">Shoe Size:</string>
+    <string name="new_shoe_detail">New Shoe Details</string>
 
 </resources>

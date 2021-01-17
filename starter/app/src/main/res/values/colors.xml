@@ -2,5 +2,22 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#938489</color>
+
+
+    <color name="ok_yellow_color">#FF9800</color>
+    <color name="selected_yellow_color">#FFC107</color>
+    <color name="skip_blue_color">#3F51B5</color>
+    <color name="selected_blue_color">#03A9F4</color>
+    <color name="black_text_color">#de000000</color>
+    <color name="grey_text_color">#99000000</color>
+    <color name="grey_button_color">#606060</color>
+    <color name="white_text_color">#ffffff</color>
+    <color name="ok_bluegrey_color">#507C9F</color>
+    <color name="ok_green_color">#6ab343</color>
+    <color name="selected_green_color">#388310</color>
+
+    <color name="title_text_color">#3D467C</color>
+    <color name="normal_text_color">#4B4D59</color>
+
 </resources>
